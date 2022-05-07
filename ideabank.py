@@ -8,20 +8,15 @@ def readfile():
             tablica.append(line.split(" "))
     return tablica
 
-f = open("plik.txt", "w")
-
-
+file_open = open("plik.txt", "a")
 
 
 if __name__ == "__main__":
-    print(sys.argv)
     if sys.argv[1] == "add":
-        print(len(sys.argv))
-        f.write("add")
+        file_open.write("add\n")
+    elif sys.argv[1] == "delete":
+        file_open.write("delete\n")
 
-
-print(len(sys.argv))
-print("Argument List:", str(sys.argv))
 
 
 
